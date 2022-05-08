@@ -64,7 +64,7 @@ nav a:hover {
     font-size: 1.2rem;
 }
 
-.searchform * {
+.searchform > * {
     padding: 1rem 1.5rem;
 }
 .searchform i {
@@ -75,9 +75,10 @@ nav a:hover {
 .searchform input {
     border: 1px solid lightgrey;
     flex-basis: 16rem;
+    overflow: auto;
 }
 
- .searchform button {
+.searchform button {
      background-color: #0065fc;
      color: white;
      font-weight: bold;
@@ -86,11 +87,17 @@ nav a:hover {
      cursor: pointer;
      opacity: 0.9;
      transition: transform 200ms;
- }
- .searchform button:hover{
+}
+
+.searchform button:hover{
      opacity: 1;
      transform: scale(1.03);
- }
+}
+
+ 
+.fas.fa-search{
+    display: none;
+}
 
 
 
@@ -108,6 +115,16 @@ nav a:hover {
     .sous-nav a:hover{
         border-top-color:transparent ; /* au passage de la souris met une bordure transparente au dessus */
         border-bottom-color:#0065fc ;/* au passage de la souris met une bordure bleu en dessous */
+    }
+
+    .searchform .span-text{
+        display: none;
+        
+    }
+
+    .fas.fa-search{
+        display: inline;
+        background-color: inherit;
     }
 
 }

@@ -47,6 +47,53 @@ nav a:hover {
     color: #0065fc; /* fixe la couleur bleue sur le texte "S'inscrire" */
 }
 
+/* BODY */ 
+.wrapper {
+    padding:0 2rem;
+}
+
+.wrapper h1, 
+.wrapper p {
+    margin-bottom: 0.8rem;
+}
+
+/* FORMULAIRE RECHERCHE */
+.searchform {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.searchform * {
+    padding: 1rem 1.5rem;
+}
+.searchform i {
+    background-color: lightgrey;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.searchform input {
+    border: 1px solid lightgrey;
+    flex-basis: 16rem;
+}
+
+ .searchform button {
+     background-color: #0065fc;
+     color: white;
+     font-weight: bold;
+     border-radius: 0 1rem 1rem 0;
+     border: none;
+     cursor: pointer;
+     opacity: 0.9;
+     transition: transform 200ms;
+ }
+ .searchform button:hover{
+     opacity: 1;
+     transform: scale(1.03);
+ }
+
+
+
 /* MEDIA QUERIES  */
 @media (max-width:800px) { /* en dessous d'un affichage en 800px fixe les comportements suivants */
     .sous-nav {

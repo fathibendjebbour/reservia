@@ -1,0 +1,69 @@
+/* import de la police Google Fonts Raleway  */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+/* sur l'ensemble du site  */
+* {
+    /* Les propriétés width et height incluent le contenu, le remplissage (padding), la bordure */
+    box-sizing: border-box;
+    /* application de la police Raleway et sans serif en secours si problème */
+    font-family: 'Raleway', sans-serif;
+}
+/* NAV */
+a {
+    color: inherit; /* couleur de la police par héritage du parent */
+    text-decoration: none; /* pas de soulignement sur les liens a */
+}
+
+#logo {
+    margin-right: auto; /* margin-right prend le maximum à droite  */
+    padding: 0 2rem; /* pas de padding haut et bas mais 2rem à droite et à gauche */
+}
+
+nav {
+    display: flex; /* comportement de boites */
+    align-items: center; /* alignement des éléments  au centre sur y */
+    justify-content: flex-end; /* alignement à droite sur x */
+    flex-wrap: wrap; /* si trop d'éléments sur la ligne, les passe à la ligne suivante */
+}
+
+nav a {
+    padding: 2rem; /* padding de 2rem sur les 4 côtés */
+    border-top: 3px solid transparent; /* bordure au dessus de 3px en transparent */
+}
+
+nav a:hover {
+    border-top-color: #0065fc; /* au survol de tous les liens de NAV, barre au dessus bleue */
+}
+
+.sous-nav {
+    display: flex;
+}
+
+.sous-nav:hover {
+    color: #0065fc; /* au passage de la souris, colorisation du texte du flex sous-menu en bleu */
+}
+.inscription {
+    font-weight: bold; /* fixe le texte en gras */
+    color: #0065fc; /* fixe la couleur bleue sur le texte "S'inscrire" */
+}
+
+/* MEDIA QUERIES  */
+@media (max-width:800px) { /* en dessous d'un affichage en 800px fixe les comportements suivants */
+    .sous-nav {
+        order: 1; /* place la sous-nav en dernier */
+        flex-basis: 100%; /* prend le maximum de la place et passe à la ligne */
+    }
+    .sous-nav a{
+        flex-basis: 50%; /* chaque lien prend 50% de toute la place disponible */
+        text-align: center; /* le texte de chaque lien est centré */
+        border-bottom:3px solid lightgrey ; /*en dessous de chacun des liens une bordure grise */
+    }
+    .sous-nav a:hover{
+        border-top-color:transparent ; /* au passage de la souris met une bordure transparente au dessus */
+        border-bottom-color:#0065fc ;/* au passage de la souris met une bordure bleu en dessous */
+    }
+
+}
+
+
+

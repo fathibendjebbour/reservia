@@ -1,6 +1,14 @@
 /* import de la police Google Fonts Raleway  */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Couleurs */
+:root{
+    --bleu:#0065fc;
+    --bleupale:#f3f8ff;
+    --grissombre:#d9d9d9;
+}
+
+
 /* sur l'ensemble du site  */
 * {
     /* Les propriétés width et height incluent le contenu, le remplissage (padding), la bordure */
@@ -32,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-    border-top-color: #0065fc; /* au survol de tous les liens de NAV, barre au dessus bleue */
+    border-top-color: var(--bleu); /* au survol de tous les liens de NAV, barre au dessus bleue */
 }
 
 .sous-nav {
@@ -40,19 +48,17 @@ nav a:hover {
 }
 
 .sous-nav:hover {
-    color: #0065fc; /* au passage de la souris, colorisation du texte du flex sous-menu en bleu */
+    color: var(--bleu); /* au passage de la souris, colorisation du texte du flex sous-menu en bleu */
 }
 .inscription {
     font-weight: bold; /* fixe le texte en gras */
-    color: #0065fc; /* fixe la couleur bleue sur le texte "S'inscrire" */
+    color: var(--bleu); /* fixe la couleur bleue sur le texte "S'inscrire" */
 }
 
 /* BODY */ 
 .wrapper {
     padding:0 2rem;
-}
-
-.wrapper h1, 
+} 
 .wrapper p {
     margin-bottom: 0.8rem;
 }
@@ -62,6 +68,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .searchform > * {
@@ -79,7 +86,7 @@ nav a:hover {
 }
 
 .searchform button {
-     background-color: #0065fc;
+     background-color: var(--bleu);
      color: white;
      font-weight: bold;
      border-radius: 0 1rem 1rem 0;
@@ -99,7 +106,68 @@ nav a:hover {
     display: none;
 }
 
+/* FILTRES */
 
+.filtres-liste {
+    display: flex;
+    align-items: center;
+    gap:1rem 2rem;
+    flex-wrap: wrap;
+    transition: 100ms;
+    margin-bottom: 1rem;
+}
+
+.filtres-liste h1 {
+
+margin-bottom: 0;
+}
+
+.filtre-item {
+    border:2px solid lightgrey;
+    border-radius:2rem;
+    display: flex;
+    align-items: center;
+}
+
+.filtre-item .fa-solid {
+    color:var(--bleu);
+    background-color: lightblue;
+    border-radius: 50%;
+    margin: -2px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.filtre-item span {
+    font-weight: bold;
+    padding:0 1rem;
+}
+
+.filtre-item:hover{
+    background-color: var(--bleupale);
+    transform: scale(1.02);
+}
+
+/* RESULTATS DE RECHERCHE */
+.info-resultat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-resultat .fa-solid{
+    border: 1px solid var(--grissombre);
+    color: var(--bleu);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* MEDIA QUERIES  */
 @media (max-width:800px) { /* en dessous d'un affichage en 800px fixe les comportements suivants */
@@ -114,14 +182,13 @@ nav a:hover {
     }
     .sous-nav a:hover{
         border-top-color:transparent ; /* au passage de la souris met une bordure transparente au dessus */
-        border-bottom-color:#0065fc ;/* au passage de la souris met une bordure bleu en dessous */
+        border-bottom-color:var(--bleu) ;/* au passage de la souris met une bordure bleu en dessous */
     }
-
+    /* barre de recherche */
     .searchform .span-text{
         display: none;
         
     }
-
     .fas.fa-search{
         display: inline;
         background-color: inherit;

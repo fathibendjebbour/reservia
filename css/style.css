@@ -169,6 +169,66 @@ margin-bottom: 0;
     justify-content: center;
 }
 
+    /* APPARTEMENT LISTE */
+    .appartements-liste {
+        display: flex;
+        gap: 1rem;
+
+    }
+    .appartements-liste > div {
+        border:1px solid red;
+        background-color: lightgrey;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .city {
+        flex-basis: 66%;
+    }
+
+    .appartements-liste .city a {
+        font-weight: bold;
+    }
+
+    .populaire {
+        flex-basis: 33%;
+    }
+
+    /* LISTE DES APPARTEMENTS VILLE */
+
+    .ville-appartements-liste {
+        display: flex;
+        flex-wrap: wrap;
+        gap:1rem;
+        justify-content: space-around;
+        margin-bottom: 1rem ;
+    }
+
+    .ville-appartements-liste div {
+        border:1px solid blue;
+        flex-basis: calc(33%-1rem);
+    }
+
+
+    /* POPULAIRE */
+    .appartements-liste .populaire-flex {
+    gap:1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    }
+    .appartements-liste .populaire-flex div {
+     border:1px solid blue;
+
+    }
+
+    .appartements-liste h3{
+        flex-basis: 100%;
+    }
+
+
+
 /* MEDIA QUERIES  */
 @media (max-width:800px) { /* en dessous d'un affichage en 800px fixe les comportements suivants */
     .sous-nav {
@@ -192,6 +252,19 @@ margin-bottom: 0;
     .fas.fa-search{
         display: inline;
         background-color: inherit;
+    }
+
+    /* liste des hébergements */
+
+    .appartements-liste {
+        flex-direction: column;
+    }
+
+    .populaire {
+        order:-1;
+    }
+    .appartements-liste .populaire {
+        flex-direction: row;
     }
 
 }
